@@ -62,7 +62,7 @@ export function Hero() {
           <p className="hero-animate font-sans text-base md:text-lg text-white/60 max-w-lg leading-relaxed mb-10 md:mb-12 font-light">
             Botines artesanales creados en León, Guanajuato.
             <br className="hidden md:block" />
-            {` '}Diseñados para permanecer.
+            {' '}Diseñados para permanecer.
           </p>
 
           {/* CTAs */}
