@@ -7,19 +7,19 @@ export const metadata: Metadata = {
 };
 
 const lookbookImages = [
-  { src: '/images/editorial/editorial-auto-4.jpg', alt: 'TINTOS Editorial — Modelo recargado en auto clásico', span: 'md:col-span-2 md:row-span-2' },
-  { src: '/images/lifestyle/lookbook-studio-1.jpg', alt: 'TINTOS Lookbook — Traje con Chelsea Negro', span: '' },
-  { src: '/images/products/chelsea-cognac-lifestyle.jpg', alt: 'Chelsea Cognac TINTOS — En mano', span: '' },
-  { src: '/images/editorial/editorial-bw-2.jpg', alt: 'TINTOS Editorial — Modelo de pie', span: '' },
-  { src: '/images/lifestyle/lookbook-studio-2.jpg', alt: 'TINTOS Lookbook — Casual con Chelsea', span: '' },
-  { src: '/images/editorial/editorial-auto-1.jpg', alt: 'TINTOS Editorial — Auto clásico', span: 'md:col-span-2' },
-  { src: '/images/lifestyle/lookbook-detail-1.jpg', alt: 'TINTOS — Detalle traje con Chelsea', span: '' },
-  { src: '/images/products/chelsea-negro-main.jpg', alt: 'Chelsea Negro TINTOS — Par completo', span: '' },
-  { src: '/images/editorial/hero-chelsea-cognac.jpg', alt: 'Chelsea Cognac TINTOS — Caminando', span: 'md:col-span-2' },
-  { src: '/images/lifestyle/lookbook-detail-2.jpg', alt: 'TINTOS — Volante auto clásico', span: '' },
-  { src: '/images/editorial/editorial-bw-1.jpg', alt: 'TINTOS Editorial — Blanco y negro', span: '' },
-  { src: '/images/lifestyle/lifestyle-backgammon.jpg', alt: 'TINTOS Lifestyle — Backgammon', span: '' },
-  { src: '/images/products/chelsea-cognac-detail.jpg', alt: 'Chelsea Cognac TINTOS — Macro detalle', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-4.jpg`, alt: 'TINTOS Editorial — Modelo recargado en auto clásico', span: 'md:col-span-2 md:row-span-2' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-studio-1.jpg`, alt: 'TINTOS Lookbook — Traje con Chelsea Negro', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-cognac-lifestyle.jpg`, alt: 'Chelsea Cognac TINTOS — En mano', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-bw-2.jpg`, alt: 'TINTOS Editorial — Modelo de pie', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-studio-2.jpg`, alt: 'TINTOS Lookbook — Casual con Chelsea', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-1.jpg`, alt: 'TINTOS Editorial — Auto clásico', span: 'md:col-span-2' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-detail-1.jpg`, alt: 'TINTOS — Detalle traje con Chelsea', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-negro-main.jpg`, alt: 'Chelsea Negro TINTOS — Par completo', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/hero-chelsea-cognac.jpg`, alt: 'Chelsea Cognac TINTOS — Caminando', span: 'md:col-span-2' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-detail-2.jpg`, alt: 'TINTOS — Volante auto clásico', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-bw-1.jpg`, alt: 'TINTOS Editorial — Blanco y negro', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lifestyle-backgammon.jpg`, alt: 'TINTOS Lifestyle — Backgammon', span: '' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-cognac-detail.jpg`, alt: 'Chelsea Cognac TINTOS — Macro detalle', span: '' },
 ];
 
 export default function LookbookPage() {

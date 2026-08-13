@@ -30,7 +30,7 @@ export function Hero() {
     <section ref={heroRef} className="relative w-full h-svh min-h-[600px] max-h-[1200px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src="/images/editorial/hero-chelsea-cognac.jpg"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/hero-chelsea-cognac.jpg"
         alt="TINTOS Chelsea Cognac — Botines artesanales de León, Guanajuato"
         fill
         priority
@@ -62,7 +62,7 @@ export function Hero() {
           <p className="hero-animate font-sans text-base md:text-lg text-white/60 max-w-lg leading-relaxed mb-10 md:mb-12 font-light">
             Botines artesanales creados en León, Guanajuato.
             <br className="hidden md:block" />
-            {' '}Diseñados para permanecer.
+            {` '}Diseñados para permanecer.
           </p>
 
           {/* CTAs */}

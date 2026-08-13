@@ -4,14 +4,14 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const instagramImages = [
-  '/images/editorial/hero-chelsea-cognac.jpg',
-  '/images/editorial/editorial-auto-1.jpg',
-  '/images/products/chelsea-negro-main.jpg',
-  '/images/lifestyle/lookbook-studio-1.jpg',
-  '/images/products/chelsea-cognac-main.jpg',
-  '/images/editorial/editorial-bw-1.jpg',
-  '/images/lifestyle/lookbook-detail-1.jpg',
-  '/images/editorial/editorial-auto-2.jpg',
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/hero-chelsea-cognac.jpg`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-1.jpg`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-negro-main.jpg`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-studio-1.jpg`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-cognac-main.jpg`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-bw-1.jpg`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-detail-1.jpg`,
+  `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-2.jpg`,
 ];
 
 export function InstagramGrid() {

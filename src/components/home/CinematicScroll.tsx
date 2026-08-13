@@ -37,7 +37,7 @@ export function CinematicScroll() {
       {/* Background Image - Fixed within section */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/images/editorial/editorial-auto-1.jpg"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-1.jpg"
           alt="TINTOS Chelsea Negro — Editorial con auto clásico"
           fill
           className="object-cover opacity-50"
@@ -54,7 +54,7 @@ export function CinematicScroll() {
               className="cinematic-word font-serif text-[clamp(2.5rem,10vw,7rem)] text-ivory font-light text-center"
               style={{
                 opacity: 0,
-                transform: 'translateY(40px)',
+                transform: `translateY(40px)',
                 transition: 'opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1)',
               }}
             >

@@ -28,7 +28,7 @@ export function StorySection() {
         {/* Image */}
         <div className="animate-on-scroll relative aspect-[4/5] overflow-hidden bg-neutral-100">
           <Image
-            src="/images/products/chelsea-cognac-detail.jpg"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-cognac-detail.jpg"
             alt="Detalle de piel — Chelsea Cognac TINTOS"
             fill
             className="object-cover"

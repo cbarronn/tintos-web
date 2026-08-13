@@ -5,10 +5,10 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 const lookbookImages = [
-  { src: '/images/lifestyle/lookbook-studio-1.jpg', alt: 'TINTOS Lookbook — Traje azul con Chelsea Negro' },
-  { src: '/images/lifestyle/lookbook-studio-2.jpg', alt: 'TINTOS Lookbook — Casual con Chelsea Negro' },
-  { src: '/images/lifestyle/lookbook-detail-1.jpg', alt: 'TINTOS Lookbook — Detalle traje rayado' },
-  { src: '/images/editorial/editorial-bw-2.jpg', alt: 'TINTOS Lookbook — Editorial blanco y negro' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-studio-1.jpg`, alt: 'TINTOS Lookbook — Traje azul con Chelsea Negro' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-studio-2.jpg`, alt: 'TINTOS Lookbook — Casual con Chelsea Negro' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lookbook-detail-1.jpg`, alt: 'TINTOS Lookbook — Detalle traje rayado' },
+  { src: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-bw-2.jpg`, alt: 'TINTOS Lookbook — Editorial blanco y negro' },
 ];
 
 export function LookbookPreview() {

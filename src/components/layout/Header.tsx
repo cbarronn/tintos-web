@@ -82,7 +82,7 @@ export function Header() {
           {/* ===== CENTER: Logo — with guaranteed horizontal padding ===== */}
           <Link href="/" className="flex items-center gap-3.5 justify-self-center px-8 lg:px-12">
             <Image
-              src="/images/brand/isotipo.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/brand/isotipo.jpg"
               alt="TINTOS"
               width={44}
               height={44}

@@ -11,7 +11,7 @@ export function Footer() {
         <div className="text-center mb-20 md:mb-24">
           <div className="flex items-center justify-center gap-4 mb-8">
             <Image
-              src="/images/brand/isotipo.jpg"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/brand/isotipo.jpg"
               alt="TINTOS"
               width={48}
               height={48}
@@ -65,7 +65,7 @@ export function Footer() {
             <ul className="space-y-4">
               {footerNavigation.tintos.map((item) => (
                 <li key={item.href + item.label}>
-                  {item.href.startsWith('http') ? (
+                  {item.href.startsWith(`http') ? (
                     <a href={item.href} target="_blank" rel="noopener noreferrer" className="font-sans text-base text-ivory/60 hover:text-ivory transition-colors duration-200">
                       {item.label}
                     </a>

@@ -4,9 +4,9 @@ import { useEffect, useRef } from 'react';
 import Image from 'next/image';
 
 const details = [
-  { label: 'PIEL', image: '/images/products/chelsea-cognac-main.jpg', alt: 'Piel premium — Chelsea Cognac TINTOS' },
-  { label: 'COSTURAS', image: '/images/products/chelsea-cognac-detail.jpg', alt: 'Detalle de costuras — TINTOS' },
-  { label: 'ACABADOS', image: '/images/products/chelsea-negro-detail.jpg', alt: 'Acabados — Chelsea Negro TINTOS' },
+  { label: 'PIEL', image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-cognac-main.jpg`, alt: 'Piel premium — Chelsea Cognac TINTOS' },
+  { label: 'COSTURAS', image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-cognac-detail.jpg`, alt: 'Detalle de costuras — TINTOS' },
+  { label: 'ACABADOS', image: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/products/chelsea-negro-detail.jpg`, alt: 'Acabados — Chelsea Negro TINTOS' },
 ];
 
 export function DetailsSection() {

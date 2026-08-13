@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: '/images/editorial/hero-chelsea-cognac.jpg',
+        url: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/hero-chelsea-cognac.jpg`,
         width: 1200,
         height: 630,
         alt: 'TINTOS — Botines Artesanales Mexicanos',
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: siteConfig.seo.defaultTitle,
     description: siteConfig.seo.defaultDescription,
-    images: ['/images/editorial/hero-chelsea-cognac.jpg'],
+    images: [`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/hero-chelsea-cognac.jpg`],
   },
   robots: {
     index: true,
