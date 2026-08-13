@@ -16,6 +16,9 @@ const nextConfig: NextConfig = {
     unoptimized: true, // Requerido para exportación estática (GitHub Pages no tiene optimizador dinámico)
   },
   devIndicators: false,
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
+  },
 };
 
 export default nextConfig;
