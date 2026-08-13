@@ -1,0 +1,368 @@
+@import "tailwindcss";
+
+/* ========================================
+   TINTOS — Design System
+   León · Guanajuato · México
+   ======================================== */
+
+@theme {
+  /* Colors */
+  --color-carbon: #111111;
+  --color-deep: #080808;
+  --color-ivory: #F3EFE7;
+  --color-warm: #FAF9F6;
+  --color-wine: #541D24;
+  --color-burgundy: #722F37;
+  --color-cognac: #9B633A;
+  --color-sand: #C5B59E;
+  --color-bronze: #8A6A43;
+
+  /* Font Families */
+  --font-serif: 'Cormorant Garamond', 'Georgia', serif;
+  --font-sans: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
+
+  /* Custom font sizes */
+  --font-size-hero: clamp(3rem, 8vw, 7rem);
+  --font-size-display: clamp(2.25rem, 5vw, 4.5rem);
+  --font-size-heading: clamp(1.75rem, 3.5vw, 3rem);
+  --font-size-subheading: clamp(1.25rem, 2vw, 1.75rem);
+
+  /* Spacing */
+  --spacing-section: clamp(4rem, 10vw, 8rem);
+  --spacing-container: clamp(1.25rem, 4vw, 6rem);
+
+  /* Easings */
+  --ease-smooth: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Animations */
+  --animation-reveal: reveal 0.8s var(--ease-out-expo) forwards;
+  --animation-fadeIn: fadeIn 0.6s var(--ease-smooth) forwards;
+  --animation-slideUp: slideUp 0.7s var(--ease-out-expo) forwards;
+}
+
+/* ========================================
+   BASE LAYER — runs BEFORE Tailwind utilities
+   This is critical in Tailwind v4!
+   ======================================== */
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: var(--color-warm);
+    color: var(--color-carbon);
+    line-height: 1.6;
+    overflow-x: hidden;
+  }
+
+  ::selection {
+    background-color: var(--color-wine);
+    color: var(--color-ivory);
+  }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: var(--color-warm);
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: var(--color-sand);
+    border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-bronze);
+  }
+
+  /* Typography defaults — these will be overridden by Tailwind utilities as expected */
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 300;
+    line-height: 1.1;
+  }
+}
+
+/* ========================================
+   COMPONENTS LAYER — custom reusable classes
+   ======================================== */
+
+@layer components {
+  .font-editorial {
+    font-family: var(--font-serif);
+    font-weight: 300;
+  }
+
+  .tracking-editorial {
+    letter-spacing: 0.2em;
+  }
+
+  .tracking-wide-custom {
+    letter-spacing: 0.15em;
+  }
+
+  /* Link underline effect */
+  .link-underline {
+    position: relative;
+    display: inline-block;
+  }
+
+  .link-underline::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: currentColor;
+    transition: width 0.3s var(--ease-smooth);
+  }
+
+  .link-underline:hover::after {
+    width: 100%;
+  }
+
+  /* Button arrow animation */
+  .btn-arrow .arrow {
+    display: inline-block;
+    transition: transform 0.3s var(--ease-smooth);
+  }
+
+  .btn-arrow:hover .arrow {
+    transform: translateX(5px);
+  }
+
+  /* Scroll-based reveal animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  }
+
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .animate-on-scroll-scale {
+    opacity: 0;
+    transform: scale(0.95);
+    transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+  }
+
+  .animate-on-scroll-scale.is-visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  /* Stagger children */
+  .stagger-children > * {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s var(--ease-out-expo), transform 0.5s var(--ease-out-expo);
+  }
+
+  .stagger-children.is-visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(2) { transition-delay: 80ms; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(3) { transition-delay: 160ms; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(4) { transition-delay: 240ms; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(5) { transition-delay: 320ms; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(6) { transition-delay: 400ms; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(7) { transition-delay: 480ms; opacity: 1; transform: translateY(0); }
+  .stagger-children.is-visible > *:nth-child(8) { transition-delay: 560ms; opacity: 1; transform: translateY(0); }
+
+  /* Skeleton Loading */
+  .skeleton {
+    background: linear-gradient(
+      90deg,
+      var(--color-ivory) 25%,
+      var(--color-sand) 37%,
+      var(--color-ivory) 63%
+    );
+    background-size: 400% 100%;
+    animation: shimmer 1.4s ease infinite;
+    border-radius: 4px;
+  }
+
+  /* Product Image Hover */
+  .product-image-hover {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .product-image-hover img {
+    transition: opacity 0.4s var(--ease-smooth), transform 0.6s var(--ease-smooth);
+  }
+
+  .product-image-hover .hover-image {
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+  }
+
+  .product-image-hover:hover .main-image {
+    opacity: 0;
+  }
+
+  .product-image-hover:hover .hover-image {
+    opacity: 1;
+  }
+
+  .product-image-hover:hover img {
+    transform: scale(1.02);
+  }
+
+  /* Flash Transition */
+  .flash-overlay {
+    position: fixed;
+    inset: 0;
+    background: var(--color-ivory);
+    pointer-events: none;
+    z-index: 9998;
+    opacity: 0;
+  }
+
+  .flash-overlay.active {
+    animation: flash 0.2s ease-out;
+  }
+}
+
+/* ========================================
+   Grain Overlay — must be outside @layer
+   so it always has high specificity
+   ======================================== */
+
+.grain::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0.03;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+}
+
+/* ========================================
+   Keyframes — always outside @layer
+   ======================================== */
+
+@keyframes reveal {
+  from {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+@keyframes scroll-hint {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  50% { transform: translateY(8px); opacity: 0.5; }
+}
+
+@keyframes flash {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-on-scroll,
+  .animate-on-scroll-scale {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+
+  .stagger-children > * {
+    opacity: 1;
+    transform: none;
+    transition: none;
+  }
+}
