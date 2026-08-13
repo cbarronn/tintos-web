@@ -27,7 +27,7 @@ export function EditorialSection() {
       {/* First Block */}
       <div className="relative h-[70vh] md:h-screen min-h-[500px] max-h-[900px] overflow-hidden">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-4.jpg"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-4.jpg`}
           alt="TINTOS Editorial — Modelo con botines Chelsea"
           fill
           className="object-cover"

@@ -30,7 +30,7 @@ export function Hero() {
     <section ref={heroRef} className="relative w-full h-svh min-h-[600px] max-h-[1200px] overflow-hidden">
       {/* Background Image */}
       <Image
-        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/hero-chelsea-cognac.jpg"
+        src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/hero-chelsea-cognac.jpg`}
         alt="TINTOS Chelsea Cognac — Botines artesanales de León, Guanajuato"
         fill
         priority

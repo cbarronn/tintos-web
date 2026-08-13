@@ -13,7 +13,7 @@ export default function NosotrosPage() {
       {/* Hero */}
       <div className="relative h-[60vh] min-h-[400px] max-h-[700px] overflow-hidden">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lifestyle-group.jpg"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/lifestyle/lifestyle-group.jpg`}
           alt="Equipo TINTOS — León, Guanajuato"
           fill
           className="object-cover"

@@ -37,7 +37,7 @@ export function CinematicScroll() {
       {/* Background Image - Fixed within section */}
       <div className="absolute inset-0 z-0">
         <Image
-          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-1.jpg"
+          src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/images/editorial/editorial-auto-1.jpg`}
           alt="TINTOS Chelsea Negro — Editorial con auto clásico"
           fill
           className="object-cover opacity-50"
